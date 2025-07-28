@@ -1,0 +1,189 @@
+/* Reset */
+/* Estrutura para manter o rodapé no final da tela */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #ffffff;
+  color: #0a3c75;
+  line-height: 1.6;
+}
+
+a {
+  color: #0a3c75;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Header */
+header {
+  background-color: #0a3c75;
+  padding: 20px 0;
+}
+
+.logo {
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  color: white;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+nav a:hover {
+  color: #aac6e8;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 80px 20px;
+  background-color: #f2f7fd;
+}
+
+.hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.hero p {
+  font-size: 1.2em;
+  color: #3a5d9a;
+  margin-bottom: 10px;
+}
+
+/* Seções */
+main {
+  padding: 40px 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+main h2 {
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+main h3 {
+  margin-top: 30px;
+  color: #3a5d9a;
+}
+
+main ul li {
+  margin-bottom: 10px;
+}
+
+/* Formulário */
+form {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input,
+textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1em;
+}
+
+button {
+  padding: 12px;
+  background-color: #0a3c75;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3a5d9a;
+}
+
+/* Footer */
+footer {
+  background-color: #0a3c75;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+/* Fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+#livros-requisitados 
+{
+  border-top: 4px solid #0a3c75;
+  margin-top: 60px;
+  padding-top: 40px;
+}
+/* Fundo de imagem exclusivo para index.html */
+body.home {
+  background: url("imagens/fundo-leitura.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+}

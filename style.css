@@ -252,6 +252,72 @@ body.home {
     display: block;
   }
 }
+/* === QUEM SOMOS === */
+.quem-somos {
+  max-width: 1000px;
+  margin: auto;
+  padding: 40px 20px;
+  background-color: #f7faff;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+}
+
+.quem-somos .intro p {
+  font-size: 1.2em;
+  margin-bottom: 15px;
+  color: #0a3c75;
+}
+
+.valores h2 {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  color: #0a3c75;
+  font-size: 1.8em;
+}
+
+.valores ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.valores li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 1.1em;
+}
+
+.valores i {
+  color: #3a5d9a;
+  font-size: 1.3em;
+  margin-top: 4px;
+}
+
+.citacao {
+  font-style: italic;
+  font-size: 1.3em;
+  color: #444;
+  margin: 40px auto;
+  text-align: center;
+  max-width: 600px;
+  border-left: 4px solid #0a3c75;
+  padding-left: 20px;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .valores li {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .citacao {
+    font-size: 1.1em;
+    padding-left: 15px;
+  }
+}
+
 
 
 }

@@ -1,43 +1,63 @@
 <!DOCTYPE html>
 <html lang="pt-PT">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contato - Vilarejo</title>
-  <link rel="stylesheet" href="style.css" />
+  
+  <!-- Google Fonts - Tipografia Melhorada -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/a2d9b62c7a.js" crossorigin="anonymous"></script>
 </head>
 <body>
+  <!-- Cabeçalho -->
   <header>
     <div class="container">
-      <img src="imagens/logo.png" alt="Logo do Vilarejo" class="logo" />
+      <img src="imagens/logo.png" alt="Logo do Vilarejo" class="logo">
       <nav>
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="clubes.html">Clubes</a></li>
-          <li><a href="planos.html">Planos</a></li>
           <li><a href="livros.html">Livros</a></li>
-          <li><a href="contato.html">Contato</a></li>
+          <li><a href="planos.html">Planos</a></li>
+          <li><a href="contato.html" class="active">Contato</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
+  <!-- Conteúdo principal -->
   <main class="fade-in">
-    <h2>Contato e Inscrição</h2>
-    <p>📧 Email: <a href=\"mailto:vilarejoleitura@gmail.com\">vilarejoleitura@gmail.com</a></p>
-    <p>📱 WhatsApp: +351 934 549 607</p>
-    <p>🌐 Site: <a href=\"https://vilarejo.pt\">vilarejo.pt</a> | <a href=\"https://vilarejo.eu\">vilarejo.eu</a></p>
-
-    <form id="form-contato">
-      <input type="text" name="nome" placeholder="Seu nome" required />
-      <input type="email" name="email" placeholder="Seu e-mail" required />
-      <textarea name="mensagem" rows="5" placeholder="Sua mensagem"></textarea>
-      <button type="submit">Enviar</button>
-    </form>
-
-    <p id="mensagem-sucesso" style="display:none; color: green;">Mensagem enviada com sucesso!</p>
+    <section class="contato">
+      <h1>📬 Entre em Contato e inscreva-se</h1>
+     
+      <p><ul>
+        <li>
+          <i class="fab fa-whatsapp"></i>
+          <strong>📱WhatsApp:</strong>
+          <a href="https://wa.me/351912345678" target="_blank">+351 912 345 678</a>
+        </li>
+        <li>
+          <i class="fas fa-envelope"></i>
+          <strong>📧Email:</strong>
+          <a href="mailto:vilarejo.leitura@gmail.com">vilarejo.leitura@gmail.com</a>
+        </li>
+        <li>
+          <i class="fa fa-instagram instagram-icon"></i>
+          <strong>Instagram:</strong>
+          <a href="https://instagram.com/vilarejo.pt" target="_blank">@vilarejo.pt</a>
+        </li>
+        <strong>🌐 Site: </strong>
+        <a href=\>vilarejo.pt</a>
+      </ul></p>
+    </section>
   </main>
 
+  <!-- Rodapé -->
   <footer>
     <p>&copy; 2025 Clube de Leitura Vilarejo</p>
   </footer>

@@ -1,36 +1,83 @@
+/* ========================================
+   VILAREJO - ESTILO MELHORADO
+   Paleta: Azul Marinho Original + Melhorias Estéticas
+   ======================================== */
+
 /* Reset */
-/* Estrutura para manter o rodapé no final da tela */
-body {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-main {
-  flex: 1;
-}
-
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Estrutura para manter o rodapé no final da tela */
 body {
-  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: 'Inter', 'Segoe UI', sans-serif;
   background-color: #ffffff;
-  color: #0a3c75;
+  color: #2c3e50;
   line-height: 1.6;
+}
+
+main {
+  flex: 1;
+}
+
+/* Tipografia Base */
+body {
+  font-size: 16px;
+  line-height: 1.7;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Lora', 'Georgia', serif;
+  color: #0a3c75;
+  font-weight: 700;
+  margin-bottom: 1.2em;
+}
+
+h1 {
+  font-size: 2.5em;
+  letter-spacing: -0.5px;
+}
+
+h2 {
+  font-size: 2em;
+  letter-spacing: -0.3px;
+}
+
+h3 {
+  font-size: 1.5em;
 }
 
 a {
   color: #0a3c75;
   text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #3a5d9a;
+  text-decoration: underline;
 }
 
 ul {
   list-style: none;
   padding-left: 0;
+}
+
+/* ========================================
+   HEADER
+   ======================================== */
+header {
+  background: linear-gradient(135deg, #0a3c75 0%, #1a4d8a 100%);
+  padding: 20px 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .container {
@@ -42,163 +89,307 @@ ul {
   justify-content: space-between;
 }
 
-/* Header */
-header {
-  background-color: #0a3c75;
-  padding: 20px 0;
-}
-
 .logo {
   height: 60px;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.05);
 }
 
 nav ul {
   display: flex;
-  gap: 20px;
+  gap: 30px;
 }
 
 nav a {
   color: white;
   font-weight: 600;
-  transition: color 0.3s;
+  font-size: 0.95em;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 2px solid transparent;
+  padding-bottom: 5px;
 }
 
 nav a:hover {
   color: #aac6e8;
+  border-bottom: 2px solid #aac6e8;
 }
 
-/* Hero */
+/* ========================================
+   HERO SECTION
+   ======================================== */
 .hero {
   text-align: center;
-  padding: 80px 20px;
-  background-color: #f2f7fd;
+  padding: 100px 20px;
+  background: linear-gradient(135deg, rgba(10, 60, 117, 0.95) 0%, rgba(26, 77, 138, 0.95) 100%), 
+              url('imagens/fundo-leitura.jpg') center/cover;
+  background-attachment: fixed;
+  color: white;
+  position: relative;
 }
 
 .hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 10px;
+  font-size: 3em;
+  margin-bottom: 15px;
+  color: #f5e6d3;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .hero p {
-  font-size: 1.2em;
-  color: #3a5d9a;
-  margin-bottom: 10px;
+  font-size: 1.3em;
+  color: #e8dcc8;
+  margin-bottom: 15px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* Seções */
+/* ========================================
+   MAIN CONTENT
+   ======================================== */
 main {
-  padding: 40px 20px;
-  max-width: 900px;
+  padding: 60px 20px;
+  max-width: 1000px;
   margin: auto;
 }
 
 main h2 {
-  font-size: 2em;
-  margin-bottom: 20px;
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #0a3c75;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+main h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background: linear-gradient(90deg, #0a3c75, #3a5d9a);
+  border-radius: 2px;
 }
 
 main h3 {
   margin-top: 30px;
-  color: #3a5d9a;
+  color: #0a3c75;
 }
 
 main ul li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
+  line-height: 1.8;
 }
 
-/* Formulário */
-form {
-  margin-top: 20px;
+/* ========================================
+   SEÇÃO QUEM SOMOS
+   ======================================== */
+.quem-somos {
+  max-width: 1000px;
+  margin: auto;
+  padding: 50px 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.quem-somos .intro p {
+  font-size: 1.15em;
+  margin-bottom: 20px;
+  color: #2c3e50;
+  line-height: 1.8;
+}
+
+.quem-somos .intro p strong {
+  color: #0a3c75;
+}
+
+.quem-somos .intro p em {
+  color: #3a5d9a;
+  font-style: italic;
+}
+
+/* ========================================
+   CITAÇÃO
+   ======================================== */
+.citacao {
+  font-style: italic;
+  font-size: 1.4em;
+  color: #0a3c75;
+  margin: 50px auto;
+  padding: 30px 30px 30px 40px;
+  text-align: center;
+  max-width: 700px;
+  border-left: 5px solid #0a3c75;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  line-height: 1.9;
+}
+
+/* ========================================
+   VALORES - CARDS
+   ======================================== */
+.valores h2 {
+  margin-top: 50px;
+  margin-bottom: 40px;
+  color: #0a3c75;
+  font-size: 2.2em;
+}
+
+.valores ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 25px;
+}
+
+.valores li {
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 12px;
+  padding: 25px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+  border-top: 4px solid #0a3c75;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1em;
+}
+
+.valores li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.valores li strong {
+  color: #0a3c75;
+  font-size: 1.1em;
+}
+
+.valores i {
+  color: #3a5d9a;
+  font-size: 1.8em;
+  margin-bottom: 5px;
+}
+
+/* ========================================
+   FORMULÁRIO
+   ======================================== */
+form {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 input,
 textarea {
-  padding: 10px;
-  border: 1px solid #ccc;
+  padding: 12px 15px;
+  border: 2px solid #e8dcc8;
   border-radius: 8px;
   font-size: 1em;
+  font-family: inherit;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: #ffffff;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #0a3c75;
+  box-shadow: 0 0 0 3px rgba(10, 60, 117, 0.1);
 }
 
 button {
-  padding: 12px;
-  background-color: #0a3c75;
+  padding: 14px 28px;
+  background: linear-gradient(135deg, #0a3c75 0%, #1a4d8a 100%);
   color: white;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: background-color 0.3s;
+  font-size: 1em;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 button:hover {
-  background-color: #3a5d9a;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 60, 117, 0.3);
 }
 
-/* Footer */
-footer {
-  background-color: #0a3c75;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  margin-top: 40px;
-}
-
-/* Fade-in */
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.fade-in.visible {
-  opacity: 1;
+button:active {
   transform: translateY(0);
 }
 
-/* Responsivo */
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-    margin-top: 10px;
-  }
+/* ========================================
+   FOOTER
+   ======================================== */
+footer {
+  background: linear-gradient(135deg, #0a3c75 0%, #1a4d8a 100%);
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+  margin-top: 60px;
+  font-size: 0.95em;
+}
 
-  .container {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+footer p {
+  opacity: 0.9;
+}
 
-  .hero h1 {
-    font-size: 2em;
-  }
+/* ========================================
+   ANIMAÇÕES
+   ======================================== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.8s ease-out forwards;
+}
 
-#livros-requisitados 
-{
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ========================================
+   LAYOUT - LIVROS
+   ======================================== */
+#livros-requisitados {
   border-top: 4px solid #0a3c75;
   margin-top: 60px;
   padding-top: 40px;
 }
-/* Fundo de imagem exclusivo para index.html */
-body.home {
-  background: url("imagens/fundo-leitura.jpg") no-repeat center center fixed;
-  background-size: cover;
-}
+
 .livros-main {
   display: flex;
-  gap: 20px;
+  gap: 30px;
   padding: 20px;
 }
 
 .sidebar {
   width: 220px;
-  background-color: #f0f4fc;
-  padding: 20px;
-  border-radius: 10px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 12px;
   height: fit-content;
   position: sticky;
   top: 100px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
 }
 
 .sidebar ul {
@@ -207,36 +398,153 @@ body.home {
 
 .sidebar a {
   display: block;
-  padding: 8px 0;
+  padding: 10px 0;
   color: #0a3c75;
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s ease, padding-left 0.3s ease;
+  border-left: 3px solid transparent;
+  padding-left: 8px;
+}
+
+.sidebar a:hover {
+  color: #3a5d9a;
+  border-left: 3px solid #0a3c75;
+  padding-left: 12px;
 }
 
 .download-btn {
   display: inline-block;
-  margin-top: 15px;
-  padding: 10px;
-  background-color: #0a3c75;
+  margin-top: 20px;
+  padding: 12px 20px;
+  background: linear-gradient(135deg, #0a3c75 0%, #1a4d8a 100%);
   color: white;
   border-radius: 8px;
   text-align: center;
+  font-weight: 600;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+}
+
+.download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(10, 60, 117, 0.3);
 }
 
 .toggle-sidebar {
   display: none;
   margin-bottom: 10px;
-  background: #0a3c75;
+  background: linear-gradient(135deg, #0a3c75 0%, #1a4d8a 100%);
   color: white;
   border: none;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
-  border-radius: 6px;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.toggle-sidebar:hover {
+  transform: translateY(-2px);
+}
+
+/* ========================================
+   SEÇÃO CONTATO
+   ======================================== */
+.contato {
+  max-width: 800px;
+  margin: auto;
+  padding: 40px 30px;
+  background: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.contato h1 {
+  margin-bottom: 30px;
+  color: #0a3c75;
+}
+
+.contato ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.contato li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  font-size: 1.1em;
+  padding: 15px;
+  background: white;
+  border-radius: 8px;
+  border-left: 4px solid #0a3c75;
+}
+
+.contato i {
+  color: #0a3c75;
+  font-size: 1.5em;
+  min-width: 30px;
+}
+
+.contato a {
+  color: #0a3c75;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contato a:hover {
+  color: #3a5d9a;
+}
+
+.instagram-icon {
+  color: #e4405f;
+}
+
+/* ========================================
+   RESPONSIVO
+   ======================================== */
 @media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .hero h1 {
+    font-size: 2em;
+  }
+
+  .hero p {
+    font-size: 1.1em;
+  }
+
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.6em;
+  }
+
+  .quem-somos {
+    padding: 30px 20px;
+  }
+
+  .valores ul {
+    grid-template-columns: 1fr;
+  }
+
   .livros-main {
     flex-direction: column;
+    gap: 20px;
   }
 
   .sidebar {
@@ -251,73 +559,74 @@ body.home {
   .toggle-sidebar {
     display: block;
   }
-}
-/* === QUEM SOMOS === */
-.quem-somos {
-  max-width: 1000px;
-  margin: auto;
-  padding: 40px 20px;
-  background-color: #f7faff;
-  border-radius: 12px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-}
 
-.quem-somos .intro p {
-  font-size: 1.2em;
-  margin-bottom: 15px;
-  color: #0a3c75;
-}
+  .citacao {
+    font-size: 1.2em;
+    padding: 20px 20px 20px 25px;
+    margin: 30px auto;
+  }
 
-.valores h2 {
-  margin-top: 40px;
-  margin-bottom: 20px;
-  color: #0a3c75;
-  font-size: 1.8em;
-}
-
-.valores ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-.valores li {
-  display: flex;
-  align-items: flex-start;
-  gap: 10px;
-  margin-bottom: 16px;
-  font-size: 1.1em;
-}
-
-.valores i {
-  color: #3a5d9a;
-  font-size: 1.3em;
-  margin-top: 4px;
-}
-
-.citacao {
-  font-style: italic;
-  font-size: 1.3em;
-  color: #444;
-  margin: 40px auto;
-  text-align: center;
-  max-width: 600px;
-  border-left: 4px solid #0a3c75;
-  padding-left: 20px;
-  opacity: 0.9;
-}
-
-@media (max-width: 768px) {
-  .valores li {
+  .contato li {
     flex-direction: column;
     align-items: flex-start;
   }
+}
 
-  .citacao {
-    font-size: 1.1em;
-    padding-left: 15px;
+@media (max-width: 480px) {
+  .hero h1 {
+    font-size: 1.5em;
+  }
+
+  .hero p {
+    font-size: 1em;
+  }
+
+  h1 {
+    font-size: 1.5em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+  }
+
+  nav ul {
+    gap: 10px;
+  }
+
+  nav a {
+    font-size: 0.9em;
+  }
+
+  .valores li {
+    padding: 20px;
+  }
+
+  form {
+    padding: 20px;
+  }
+
+  .contato {
+    padding: 20px;
+  }
+
+  .contato li {
+    padding: 12px;
+    font-size: 1em;
   }
 }
 
-
-
+/* ========================================
+   CLASSE PARA HOME COM FUNDO
+   ======================================== */
+body.home {
+  background: url("imagens/fundo-leitura.jpg") no-repeat center center fixed;
+  background-size: cover;
 }
+
+body.home main {
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 15px;
+  margin: 20px auto;
+  max-width: 1000px;
+}
+

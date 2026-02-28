@@ -507,17 +507,22 @@ footer p {
    RESPONSIVO
    ======================================== */
 @media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 15px;
+ header {
+    position: relative; 
+    padding: 15px 0;
   }
 
   .container {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     gap: 15px;
   }
 
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
   .hero h1 {
     font-size: 2em;
   }

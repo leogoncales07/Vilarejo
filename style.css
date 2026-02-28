@@ -629,4 +629,149 @@ body.home main {
   margin: 20px auto;
   max-width: 1000px;
 }
+/* ========================================
+   SEÇÃO SOCIAL - MELHORADA
+   ======================================== */
 
+/* Fundo da Página (Imagem atrás do cartão branco) */
+body.social-theme {
+  background: url("imagens/fundo-social.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+/* Cartão Branco Principal */
+.social-page {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 50px 40px;
+  background-color: rgba(255, 255, 255, 0.97); /* Fundo branco levemente transparente */
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15); /* Sombra mais destacada */
+}
+
+/* Cabeçalho da Logo */
+.social-header {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.img-social {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave na logo */
+}
+
+/* Textos e Títulos */
+.social-content p {
+  font-size: 1.15em;
+  color: #2c3e50;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.social-page h2 {
+  color: #0a3c75;
+  font-size: 2.2em;
+  margin-bottom: 25px;
+  padding-bottom: 10px;
+}
+
+.social-page h3 {
+  color: #3a5d9a;
+  font-size: 1.4em;
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+/* Destaque da Justificação (O "Pulo do Gato") */
+.social-highlight {
+  background-color: #f0f4f8; /* Azul muito clarinho */
+  padding: 40px;
+  margin: 40px -40px; /* Faz a cor ir até às bordas nos lados */
+  border-top: 3px solid #0a3c75;
+  border-bottom: 3px solid #0a3c75;
+}
+
+.social-highlight h2 {
+  margin-top: 0;
+}
+
+.social-highlight p {
+  font-size: 1.15em;
+  color: #2c3e50;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+/* Listas com Ícones */
+.social-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 30px;
+  margin-top: 20px;
+}
+
+.social-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 15px;
+  font-size: 1.1em;
+  line-height: 1.6;
+  background: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  border-left: 4px solid #3a5d9a;
+}
+
+.social-list i {
+  color: #e09f3e; /* Uma cor quente (dourado/mostarda) para destacar o ícone e trazer esperança */
+  margin-top: 4px;
+  font-size: 1.2em;
+}
+
+/* Botão de Contato Final */
+.social-cta {
+  text-align: center;
+  margin-top: 50px;
+  padding-top: 30px;
+  border-top: 2px solid #e8dcc8;
+}
+
+.social-cta p {
+  font-weight: 600;
+  color: #0a3c75;
+}
+
+.btn-social-cta {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 15px 35px;
+  background: linear-gradient(135deg, #0a3c75 0%, #1a4d8a 100%);
+  color: white;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.1em;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-social-cta:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(10, 60, 117, 0.4);
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .social-page {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+  .social-highlight {
+    padding: 30px 20px;
+    margin: 30px -20px;
+  }
+}
